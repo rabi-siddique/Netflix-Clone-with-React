@@ -1,0 +1,38 @@
+.row{
+    margin-left:20px;
+    color:white;
+}
+
+.row_posters{
+    display:flex;
+    overflow-y:hidden;
+    overflow-x:scroll; /*To add scrollbar along x-axis */
+    padding:20px;
+}
+
+/*With the property below, we're telling browser to hide the scrollbar but keep the functionality */
+.row_posters::-webkit-scrollbar{
+    display:none;
+}
+
+.row_poster{
+    object-fit: contain; /*Will keep the aspect ratio*/
+    width:100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    
+}
+
+.row_poster:hover{
+    transform: scale(1.08);
+    
+}
+
+.row_posterLarge{
+    max-height: 250px;
+}
+
+.row_posterLarge:hover{
+    transform:scale(1.09);
+}
